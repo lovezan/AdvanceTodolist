@@ -1,0 +1,65 @@
+.task-list {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background-color: rgba(30, 30, 30, 0.9);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.task-list th,
+.task-list td {
+  padding: 1rem;
+  text-align: left;
+  color: #f0f0f0;
+}
+
+.task-list th {
+  background-color: rgba(20, 20, 20, 0.8);
+  border-bottom: 2px solid #0dff72;
+}
+
+.task-item {
+  transition: background-color 0.3s ease;
+}
+
+.task-item:hover {
+  background-color: rgba(40, 40, 40, 0.9);
+}
+
+.task-item.completed {
+  background-color: rgba(40, 40, 40, 0.9);
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #0dff72;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.checkbox.checked {
+  background-color: rgba(13, 255, 114, 0.5);
+  transform: scale(1.1);
+}
+
+.tick {
+  width: 12px;
+  height: 12px;
+  background-color: #0dff72;
+  border-radius: 3px;
+  display: none;
+  position: absolute;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: rotate(45deg) translate(2px, 2px);
+}
+
+.checkbox.checked .tick {
+  display: block;
+}

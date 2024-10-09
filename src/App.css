@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at center, #0d0d0d, #1a1a1a);
+  color: #f0f0f0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  padding: 2rem;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.top,
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #0dff72;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 15px rgba(0, 255, 118, 0.75),
+    0 0 30px rgba(0, 255, 118, 0.75);
+  animation: neon-pulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-pulse {
+  from {
+    text-shadow: 0 0 10px rgba(0, 255, 118, 0.75),
+      0 0 20px rgba(0, 255, 118, 0.75);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(0, 255, 118, 0.95), 0 0 40px rgba(0, 255, 118, 1);
+  }
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 2px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1); /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0dff72; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners for the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0bff5e; /* Color on hover */
+}
+
+.neon-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Ensure clicks pass through to the app */
+}
+
+.neon-node {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(13, 255, 114, 0.7);
+  box-shadow: 0 0 20px rgba(13, 255, 114, 0.7), 0 0 40px rgba(13, 255, 114, 0.5),
+    0 0 60px rgba(13, 255, 114, 0.3);
+  animation: pulsate 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulsate {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+/* Neon line effect */
+.neon-line {
+  stroke: rgba(13, 255, 114, 0.7); /* Line color */
+  stroke-width: 2;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 5px rgba(13, 255, 114, 0.7)); /* Outer glow */
+  transition: stroke 0.3s ease; /* Smooth transitions */
+}

@@ -1,0 +1,53 @@
+
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.task-form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.task-item h3 {
+  margin: 0;
+}
+
+.task-item.completed {
+  text-decoration: line-through;
+}
+
+.task-filters button {
+  margin-right: 10px;
+  padding: 5px 10px;
+}
+
+.task-search input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}

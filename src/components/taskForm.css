@@ -1,0 +1,83 @@
+.form-container {
+  display: flex;
+  justify-content: center; /* Center the form */
+  align-items: center; /* Vertically center the form */
+  height: 100%; /* Fill the parent container */
+}
+
+.task-form {
+  background: linear-gradient(145deg, #2c2c2c, #3c3c3c);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+  transition: all 0.3s ease; /* Smooth transition for the form */
+}
+
+.form-group {
+  position: relative; /* Position relative for inner elements */
+  margin-bottom: 1.5rem; /* Space between form groups */
+}
+
+label {
+  display: block; /* Block display for labels */
+  margin-bottom: 0.5rem; /* Space between label and input */
+  color: #bbb; /* Label color */
+}
+
+input,
+textarea,
+select {
+  background-color: rgba(40, 40, 40, 0.8);
+  color: #fff; /* Input text color */
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  width: 100%;
+  transition: all 0.3s ease; /* Transition for input elements */
+  position: relative; /* For cursor effect positioning */
+  z-index: 1; /* Layer above the background */
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 10px #0dff72; /* Green glow effect on focus */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder,
+select:focus::placeholder {
+  opacity: 0; /* Hide placeholder when focused */
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  transition: opacity 0.3s ease; /* Smooth transition for placeholder */
+  opacity: 1; /* Placeholder visible by default */
+}
+
+button {
+  background-color: #0dff72; /* Button background color */
+  color: #000; /* Button text color */
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease; /* Button hover effect */
+}
+
+button:hover {
+  background-color: #0bcf6e; /* Darker green on hover */
+}
+
+/* Cursor tilt effect */
+input:focus,
+textarea:focus,
+select:focus {
+  transform: translateY(-2px) rotate(2deg); /* Tilt effect */
+}
